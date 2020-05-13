@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="./vendor/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="tests">
+            <directory>./test/Api</directory>
+            <directory>./test/Model</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./lib/org/wso2/client/api/PizzaShack</directory>
+            <directory suffix=".php">./lib/org/wso2/client/model/PizzaShack</directory>
+        </whitelist>
+    </filter>
+</phpunit>
